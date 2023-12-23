@@ -27,7 +27,7 @@ const UserInput: FC = () => {
         <input placeholder="user input" type="text" onChange={handleChange} />
         <button onClick={handleClick}>click me!</button>
         {loading && <p>Loading...</p>}
-        <p>{input}</p>
+        <p>You've typed: {input}</p>
       </form>
     </>
   );
