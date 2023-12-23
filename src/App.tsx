@@ -19,7 +19,7 @@ function App() {
     <>
       <h1>madlib</h1>
       <UserInput />
-      <button onClick={handleClick}>button</button>
+      {/* <button onClick={handleClick}>button</button> */}
       {loading && <p>Loading...</p>}
     </>
   );
