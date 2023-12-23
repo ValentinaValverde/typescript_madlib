@@ -1,7 +1,10 @@
+import UserInput from "./components/UserInput";
+
 function App() {
   return (
     <>
-      <p>madlib</p>
+      <h1>madlib</h1>
+      <UserInput />
     </>
   );
 }
