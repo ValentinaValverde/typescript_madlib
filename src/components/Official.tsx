@@ -6,34 +6,33 @@ const Official: FC = () => {
   const [adj, setAdj] = useState("");
   const [adv, setAdv] = useState("");
 
-  const [loading, setLoading] = useState(false);
-
   const handleSubmit = async () => {
-    try {
-      setLoading(true);
-      console.log("this works");
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-      event?.preventDefault();
-      //   setInput("button clicked!");
-    }
+    event?.preventDefault();
+    setNoun("noun");
+    setVerb("verb");
+    setAdj("adj");
+    setAdv("adv");
   };
+
+  // this method wouldn't work for me because I am using useState
+  // const nounInput = document.getElementById("noun") as HTMLElement;
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="text" />
-        <button>Submit</button>
-        {loading && <p>Loading...</p>}
+        <input type="text" placeholder="Noun" id="noun" />
+        <input type="text" placeholder="Verb" value="verb" />
+        <input type="text" placeholder="Adjective" value="adj" />
+        <input type="text" placeholder="Adverb" value="adv" />
+
+        <button type="submit">Submit</button>
       </form>
 
       <div>
-        <p>Noun: </p>
-        <p>Verb: </p>
-        <p>Adj: </p>
-        <p>Adv: </p>
+        <p>Noun: {noun}</p>
+        <p>Verb: {verb}</p>
+        <p>Adj: {adj}</p>
+        <p>Adv: {adv}</p>
       </div>
     </>
   );
