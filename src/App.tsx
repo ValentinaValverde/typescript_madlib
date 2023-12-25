@@ -1,12 +1,10 @@
-import UserInput from "./components/UserInput";
-import ToggleButton from "./components/ToggleButton";
+import Official from "./components/Official";
 
 function App() {
   return (
     <>
       <h1>madlib</h1>
-      <UserInput />
-      <ToggleButton />
+      <Official />
     </>
   );
 }
