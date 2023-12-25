@@ -13,7 +13,7 @@ const UserInput: FC = () => {
     } finally {
       setLoading(false);
       event?.preventDefault();
-      setInput("you've clicked me!");
+      setInput("button clicked!");
     }
   };
 

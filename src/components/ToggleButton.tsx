@@ -9,9 +9,14 @@ function ToggleButton() {
 
   return (
     <div>
-      <button onClick={handleClick}>{isOn ? "On" : "Off"}</button>
+      <button onClick={handleClick} className="">
+        {isOn ? "On" : "Off"}
+      </button>
     </div>
   );
 }
 
 export default ToggleButton;
+
+// To toggle classname:
+// const toggleClass = (el, className) => el.classList.toggle(className);
