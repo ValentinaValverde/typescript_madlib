@@ -40,6 +40,7 @@ const Official: FC = () => {
         <input type="text" placeholder="Verb" onChange={verbChange} />
         <input type="text" placeholder="Adjective" onChange={adjChange} />
         <input type="text" placeholder="Adverb" onChange={advChange} />
+        <button type="submit">Reset</button>
       </form>
 
       <div>
@@ -48,10 +49,10 @@ const Official: FC = () => {
         <p>Adj: {adj}</p>
         <p>Adv: {adv}</p>
 
+        {/* add className="hidden" to the p tag below */}
         <p>
           There was once a {adj} {noun} that loved to {verb} {adv}.
         </p>
-        <button type="submit">Reset</button>
       </div>
     </>
   );
