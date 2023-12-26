@@ -8,22 +8,38 @@ const Official: FC = () => {
 
   const handleSubmit = async () => {
     event?.preventDefault();
-    setNoun("noun");
-    setVerb("verb");
-    setAdj("adj");
-    setAdv("adv");
   };
 
   // this method wouldn't work for me because I am using useState
   // const nounInput = document.getElementById("noun") as HTMLElement;
 
+  //   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //     setInput(event.target.value);
+  //   };
+
+  const nounChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNoun(event.target.value);
+  };
+
+  const verbChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setVerb(event.target.value);
+  };
+
+  const adjChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAdj(event.target.value);
+  };
+
+  const advChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAdv(event.target.value);
+  };
+
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Noun" id="noun" />
-        <input type="text" placeholder="Verb" value="verb" />
-        <input type="text" placeholder="Adjective" value="adj" />
-        <input type="text" placeholder="Adverb" value="adv" />
+        <input type="text" placeholder="Noun" onChange={nounChange} />
+        <input type="text" placeholder="Verb" onChange={verbChange} />
+        <input type="text" placeholder="Adjective" onChange={adjChange} />
+        <input type="text" placeholder="Adverb" onChange={advChange} />
 
         <button type="submit">Submit</button>
       </form>
