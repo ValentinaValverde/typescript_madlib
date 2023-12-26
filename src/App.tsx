@@ -1,10 +1,10 @@
-import Official from "./components/Official";
+import MadLib from "./components/MadLib";
 
 function App() {
   return (
     <>
       <h1>madlib</h1>
-      <Official />
+      <MadLib />
     </>
   );
 }
