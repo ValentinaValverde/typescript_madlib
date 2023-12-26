@@ -8,14 +8,14 @@ const Official: FC = () => {
 
   const handleSubmit = async () => {
     event?.preventDefault();
+    setNoun("");
+    setVerb("");
+    setAdj("");
+    setAdv("");
   };
 
   // this method wouldn't work for me because I am using useState
   // const nounInput = document.getElementById("noun") as HTMLElement;
-
-  //   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     setInput(event.target.value);
-  //   };
 
   const nounChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNoun(event.target.value);
@@ -40,8 +40,6 @@ const Official: FC = () => {
         <input type="text" placeholder="Verb" onChange={verbChange} />
         <input type="text" placeholder="Adjective" onChange={adjChange} />
         <input type="text" placeholder="Adverb" onChange={advChange} />
-
-        <button type="submit">Submit</button>
       </form>
 
       <div>
@@ -49,6 +47,11 @@ const Official: FC = () => {
         <p>Verb: {verb}</p>
         <p>Adj: {adj}</p>
         <p>Adv: {adv}</p>
+
+        <p>
+          There was once a {adj} {noun} that loved to {verb} {adv}.
+        </p>
+        <button type="submit">Reset</button>
       </div>
     </>
   );
